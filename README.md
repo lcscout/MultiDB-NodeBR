@@ -11,4 +11,4 @@ docker run --name mongoclient -p 3000:3000 --link mongodb:mongodb -d mongoclient
 docker exec -it mongodb mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin --eval "db.getSiblingDB('herois').createUser({user: 'user', pwd: 'senhauser', roles: [{role: 'readWrite', db: 'herois'}]})"
 ```
 
-With the containers up you can ``npm install`` and ``npm t`` to initalize everything, run the tests and start the server. You can also call ``npm run test:prod`` to test the production environment instead of the development one.
+With the containers up you can ``npm install`` to install all dependencies, and ``npm t`` to initalize everything, run the tests and start the server. You can also call ``npm run test:prod`` to test the production environment instead of the development one.
