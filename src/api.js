@@ -23,6 +23,7 @@ const HeroiSchema = require('./db/strategies/mongodb/schemas/heroisSchema')
 
 const HeroRoute = require('./routes/heroRoutes')
 const AuthRoute = require('./routes/authRoutes')
+const UtilRoute = require('./routes/utilRoutes')
 
 const Postgres = require('./db/strategies/postgres/postgres')
 const UsuarioSchema = require('./db/strategies/postgres/schema/usuarioSchema')
@@ -95,7 +96,8 @@ async function main() {
 
     app.route([
         ...mapRoutes(new HeroRoute(context), HeroRoute.methods()),
-        ...mapRoutes(new AuthRoute(JWT_SECRET, contextPostgres), AuthRoute.methods())
+        ...mapRoutes(new AuthRoute(JWT_SECRET, contextPostgres), AuthRoute.methods()),
+        ...mapRoutes(new UtilRoute(), UtilRoute.methods())
     ])
 
     await app.start()
