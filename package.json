@@ -1,0 +1,37 @@
+{
+    "name": "multidb",
+    "version": "1.0.0",
+    "description": "testing multidatabase with docker and node",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha src/tests/*.js",
+        "test:prod": "cross-env NODE_ENV=prod npm t",
+        "prod": "cross-env NODE_ENV=prod node api.js"
+    },
+    "keywords": [
+        "env",
+        "mongoatlas",
+        "heroku"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "boom": "^7.3.0",
+        "dotenv": "^8.1.0",
+        "hapi": "^18.1.0",
+        "hapi-auth-jwt2": "^8.6.2",
+        "hapi-swagger": "^10.1.1",
+        "inert": "^5.1.3",
+        "joi": "^14.3.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.6.13",
+        "pg": "^7.12.1",
+        "pg-hstore": "^2.3.3",
+        "sequelize": "^5.18.0",
+        "vision": "^5.4.4"
+    },
+    "devDependencies": {
+        "mocha": "^6.2.0"
+    }
+}
