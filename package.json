@@ -1,12 +1,12 @@
 {
     "name": "multidb",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "testing multidatabase with docker and node",
     "main": "index.js",
     "scripts": {
         "preinstall": "npm i -g pm2",
         "postinstall": "cross-env NODE_ENV=prod npm t",
-        "test": "nyc --reporter=html mocha --timeout 10000 --exit src/tests/*.js",
+        "test": "nyc --reporter=html mocha --timeout 10000 src/tests/*.js",
         "test:prod": "cross-env NODE_ENV=prod npm t",
         "prod": "cross-env NODE_ENV=prod pm2-runtime ./src/api.js"
     },
