@@ -15,7 +15,8 @@
         "mongoatlas",
         "heroku",
         "pm2",
-        "istanbul"
+        "istanbul",
+        "nyc"
     ],
     "author": "",
     "license": "ISC",
