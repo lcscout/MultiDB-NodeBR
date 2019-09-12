@@ -2,7 +2,7 @@ docker ps
 
 docker exec -it (id do mongodb) ->
 
-docker exec -it fe644f69814b mongo -u cout -p cout4633 --authenticationDatabase herois
+docker exec -it fe644f69814b mongo -u user -p senhauser --authenticationDatabase herois
 
 show dbs
 use herois
