@@ -48,7 +48,6 @@ class Postgres extends ICrud {
 
   static async connect() {
     const connection = new Sequelize(process.env.POSTGRES_URI, {
-      operatorsAliases: false,
       quoteIdentifiers: false,
       logging: false,
       ssl: process.env.SSL_DB,
