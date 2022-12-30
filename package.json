@@ -39,7 +39,7 @@
         "vision": "^5.4.4"
     },
     "devDependencies": {
-        "mocha": "^6.2.0",
+        "mocha": "^10.2.0",
         "nyc": "^14.1.1"
     }
 }
